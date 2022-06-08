@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Создание веб сайта</title>
+  <link rel="stylesheet" href="css/main.min.css" media="screen">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" crossorigin="anonymous">
+</head>
+<body>
+  <header class="container p-3 mt-5">
+  <div class="row">
+    <div class="col-4">
+    <img class="logo" src="img/news.png" alt="Лого сайта">
+    <span class="logo_text">itProger <small>Blog</small></span>
+    </div>
+    <div class="col-3 offset-1 text-right">
+    <input id="search" onclick="openSearch()" class="border-secondary" type="text" placeholder="Поиск">
+  <div id="myOverlay" class="overlay">
+    <h2>Форма поиска</h2>
+    <button class="btn btn-danger closebtn" onclick="closeSearch()">Закрыть</button>
+    <div class="overlay-content">
+      <form>
+        <input type="text" placeholder="Поиск" name="search">
+      </form>
+    </div>
+  </div>
+  </div>
+    <div class="col-4 navigation text-right">
+      <button type="button" class="btn_1 btn btn-light">Главная</button>
+      <button type="button" class="btn_1 btn btn-light">Статьи</button>
+      <button type="button" class="btn_1 btn btn-light">Контакты</button>
+    </div>
+  </div>
+</header>
+
+    <div style="background: #9a2f2d!important;" class="jumbotron container mt-5 p-3 p-nd-5 text-white rounded bg-dark">
+      <div class="row">
+        <div class="col-md-7 px-4">
+          <h1 class="display-5">3 основные сферы применения языка Python</h1>
+          <p class="lead my-3">До начала активного изучения любого языка программирования правильно было бы задуматься о сферах его применения. Мы расскажем про 3 самые популярные сферы применения языка Python.</p>
+          <p class="lead mb-0"><a href="#"><button class="btn btn-danger">Читать далее</button></a></p>
+        </div>
+        <div class="col-md-5">
+        <img class="image float-end img-thumbnail my-3" src="img/mozrust-1400x770.png">
+        </div>
+      </div>
+    </div>
+
+  <div id="container" class="container">
+    <div class="row">
+    <div class="col-8"><h2>Новости</h2>
+      <div id="cards" class="row row-cols-1 row-cols-md-2">
+        <div class="col">
+          <div class="card">
+            <img src="img/img_1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Сравнение движков: Unreal Engine 4 против Unity 5</h5>
+            <p class="card-text">Выбрать движок дело не простое, а особенно когда оба очень хороши. В статье мы проведем сравнение двух программ и выясним какой движок использовать именно Вам!</p>
+            <a href="#" class="btn btn-warning">Читать далее</a>
+            </div>
+          </div>
+        </div>
+      <div class="col">
+          <div class="card">
+            <img src="img/img_2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">7 девушек айтишниц из фильмов и сериалов</h5>
+            <p class="card-text">Много ли вы знаете фильмов и сериалов, где главные персонажы это девушки программисты? Мы подобрали 7 фильмов с такой концепцией.</p>
+            <a href="#" class="btn btn-warning">Читать далее</a>
+            </div>
+          </div>
+        </div>
+      <div class="col">
+          <div class="card">
+            <img src="img/img_4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">11 полезных инструментов для веб-разработчика</h5>
+            <p class="card-text">Разработчики постоянно пытаются сделать свою жизнь проще или расширить собственные возможности. Мы подготовили 11 инструментов, которые это обеспечат.</p>
+            <a href="#" class="btn btn-warning">Читать далее</a>
+            </div>
+          </div>
+        </div>
+      <div class="col">
+          <div class="card">
+            <img src="img/img_5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Что такое Deep Learning? Как работает глубокое обучение?</h5>
+            <p class="card-text">Как работает глубокое обучение и что оно из себя представляет? В ходе статьи мы расскажем про Deep Learning и разберемся с его ключевыми понятиями.</p>
+            <a href="#" class="btn btn-warning">Читать далее</a>
+            </div>
+          </div>
+      </div>
+      </div>
+      <div style="clear: both"></div>
+      <div id="loadMoreBlock" class="row row-cols-1 row-cols-md-2"></div>
+
+        <div style="clear: both"></div>
+        <div class="text-center">
+        <button type="button" id="loadMore" class="btn btn-danger">Подгрузить больше</button>
+      </div>
+      </div>
+      <div id="aside" class="container col-4">
+          <h2>Анонсы</h2>
+          <p class="bg-white p-3">Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          <div class="card text-white card-block">
+          <img src="img/img_3.jpg" class="card-img-top img-thumbnail" alt="...">
+          <div class="card-body">
+          <p class="card-text">Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          <a href="#" class="btn btn-light">Читать далее</a>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+    <footer class="blog-footer container">
+      <p>Все права защищены &copy;</p>
+    </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
